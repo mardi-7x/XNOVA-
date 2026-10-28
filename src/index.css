@@ -1,0 +1,89 @@
+@import "tailwindcss";
+
+@layer utilities {
+  .text-glow {
+    text-shadow: 0 0 10px rgba(0, 240, 255, 0.65), 0 0 20px rgba(0, 240, 255, 0.35);
+  }
+  .text-glow-amber {
+    text-shadow: 0 0 10px rgba(245, 158, 11, 0.65), 0 0 20px rgba(245, 158, 11, 0.35);
+  }
+  .text-glow-emerald {
+    text-shadow: 0 0 10px rgba(16, 185, 129, 0.65), 0 0 20px rgba(16, 185, 129, 0.35);
+  }
+  .text-glow-rose {
+    text-shadow: 0 0 10px rgba(244, 63, 94, 0.65), 0 0 20px rgba(244, 63, 94, 0.35);
+  }
+  .box-glow {
+    box-shadow: 0 0 25px rgba(0, 240, 255, 0.15), inset 0 0 15px rgba(0, 240, 255, 0.05);
+  }
+  .box-glow-sm {
+    box-shadow: 0 0 12px rgba(0, 240, 255, 0.12);
+  }
+  .box-glow-amber {
+    box-shadow: 0 0 20px rgba(245, 158, 11, 0.15);
+  }
+  .holo-border {
+    border: 1px solid rgba(0, 240, 255, 0.2);
+  }
+  .holo-border-bright {
+    border: 1px solid rgba(0, 240, 255, 0.45);
+  }
+  .holo-glass {
+    background: rgba(8, 16, 32, 0.72);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+  }
+  .holo-panel {
+    background: linear-gradient(135deg, rgba(10, 25, 47, 0.65) 0%, rgba(4, 9, 20, 0.85) 100%);
+    border: 1px solid rgba(0, 240, 255, 0.18);
+    backdrop-filter: blur(12px);
+  }
+  .holo-grid-bg {
+    background-size: 32px 32px;
+    background-image: 
+      linear-gradient(to right, rgba(0, 240, 255, 0.04) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(0, 240, 255, 0.04) 1px, transparent 1px);
+  }
+}
+
+/* Custom Cyber Scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: rgba(3, 7, 18, 0.8);
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 240, 255, 0.3);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 240, 255, 0.6);
+}
+
+@keyframes scanbeam {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(1000%);
+  }
+}
+
+.animate-scanbeam {
+  animation: scanbeam 8s ease-in-out infinite;
+}
+
+@keyframes pulseGlow {
+  0%, 100% {
+    opacity: 0.3;
+  }
+  50% {
+    opacity: 0.8;
+  }
+}
+
+.animate-pulse-glow {
+  animation: pulseGlow 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}

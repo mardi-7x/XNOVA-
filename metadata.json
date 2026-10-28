@@ -1,0 +1,6 @@
+{
+  "name": "XNOVA — Global News Intelligence Engine",
+  "description": "Production-grade news collection, source corroboration, and multi-model verification pipeline with futuristic holographic command center.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
